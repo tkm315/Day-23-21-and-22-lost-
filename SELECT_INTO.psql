@@ -1,0 +1,4 @@
+--insert from one table to the new table
+INSERT select_list INTO [TEMPORARY | TEMP] [TABLE] new_table_name 
+FROM table_1 
+WHERE search_condition;

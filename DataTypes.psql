@@ -1,0 +1,38 @@
+        --Data Types in psql--
+Boolean == 1) BOOL   or  BOOLEAN
+
+character  === 1) CHAR(n)
+            == 2) VARCHAR(n)
+            == 3) TEXT
+
+Numeric  === 1) SMALLINT
+          == 2) INT
+          == 3) SERIAL
+          == 4) FLOAT(n)
+          == 5) REAL    or   FLOAT8
+        ==== 6) NUMERIC(P,S)
+
+
+Temporal  == 1) DATE
+          == 2) TIME
+          == 3) TIMESTAMP
+          == 4) TIMESTAMPZ
+          == 5) INTERVAL
+
+
+Array   == array of strings
+        == array of integers
+
+
+
+UUID   ===  its like SERIAL but better  ,  hides the sensitive data like id in url
+
+
+JOSN  == 1)JSON
+          2)JSONB  binary mode of json its faster to proces and slower to insert , suports indexing
+
+
+SPECIAL data types == INET    ,     MACADDR
+
+
+hstore = stores key-value pairs

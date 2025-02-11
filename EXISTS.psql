@@ -1,0 +1,28 @@
+            -- is there any row in this table with amount = 0 ? --
+SELECT EXIST (
+SELECT 1 FROM payment WHERE amount = 0
+);
+
+            -- is there any row in this table with amount > 11 ? --
+SELECT EXIST (
+SELECT 1 FROM payment WHERE amount > 11
+);
+
+            -- find the customers with at least one amount grather than 11 --
+SELECT first_name , last_name FROM customer c
+        WHERE  EXIST(
+                SELECT 1 FROM payment p 
+                        WHERE  c.customer_id = p.customer_id    AND   amount > 11
+        )
+ORDER BY first_name , last_name;
+
+
+
+            -- find the customers with any  amount grather than 11 --
+ WHERE  NOT EXIST(
+
+
+
+            -- what is this ? --
+      WHERE  EXIST(SELECT NULL )
+OUTPUT : returns all the rows

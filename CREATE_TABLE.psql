@@ -1,0 +1,21 @@
+        --how to create table in psql--
+CREATE TABLE [IF NOT EXIST] TABLE table_name (
+  col1   datatype   length   column_constraint
+  col2   datatype   length   column_constraint
+  .
+  .
+  .
+  table_constraint
+);
+
+              --example--
+CREATE TABLE accounts (
+id              SERIAL PRIMARY KEY , 
+username        VARCHAR(50) UNIQUE NOT NULL , 
+last_update    TIMESTAMP 
+created_at      TIMESTAMP NOT NULL , 
+email            VARCHAR(255) UNIQUE NOT NULL
+password        VARCHAR(50) NOT NULL
+);
+--to see the table : 
+--\d accounts
